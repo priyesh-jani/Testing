@@ -13,4 +13,3 @@ steps:
   - '.'
 options:
   logging: CLOUD_LOGGING_ONLY
-  logsBucket: gs://my-cloud-build-logs1
