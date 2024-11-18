@@ -1,12 +1,16 @@
 steps:
-  - name: 'gcr.io/cloud-builders/gcloud'
-    args:
-      - 'functions'
-      - 'deploy'
-      - 'chatbot'  # Replace with your function's name
-      - '--runtime'
-      - 'python310'
-      - '--trigger-http'
-      - '--allow-unauthenticated'
-      - '--entry-point'
-      - 'app' 
+- name: 'gcr.io/cloud-builders/gcloud'
+  args:
+  - 'functions'
+  - 'deploy'
+  - 'chatbot'
+  - '--runtime'
+  - 'python39'
+  - '--trigger-http'
+  - '--entry-point'
+  - 'app'
+  - '--source'
+  - '.'
+options:
+  logging: CLOUD_LOGGING_ONLY
+  logsBucket: gs://my-cloud-build-logs
