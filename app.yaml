@@ -1,0 +1,2 @@
+runtime: python310  # Choose the runtime based on your Python version, e.g., python310 for Python 3.10
+entry_point: app  # This is where Flask will run from (your app object)
